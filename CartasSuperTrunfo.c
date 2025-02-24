@@ -44,7 +44,8 @@ int main(){
     densidadepopulacional = 100000000 / densidadepopulacional;
 
     // Inverter a densidade populacional
-    int numero_invertido = (float)densidadepopulacional;
+    int numero_invertido = (int)densidadepopulacional; 
+
 
     // Dados a Serem Exibidos
     printf("Carta 1\n");
@@ -93,7 +94,7 @@ int main(){
     densidadepopulacional2 = 100000000 / densidadepopulacional2;
 
     // Inverter a densidade populacional
-    int numero_invertido2 = (float)densidadepopulacional2;
+    int numero_invertido2 = (int)densidadepopulacional2;
     
     // Dados a Serem Exibidos
     printf("Carta 2\n");
@@ -102,17 +103,54 @@ int main(){
     printf(" Densidade populacional: %.2f hab/km²\n Pib per capita: R$%.2f reais\n", densidadepopulacional2, pibpercapta2);
 
     // Calcular o super poder
-    int poder2 = populacao + area + pib + pontosturisticos + pibpercapta + numero_invertido2;
+    int poder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapta2 + numero_invertido2;
     printf(" Super poder: %d\n", poder2);
 
-  
-    printf("Populacao > populacao2: %d\n", populacao > populacao2);
-    printf("Area > area2: %d\n", area > area2);
-    printf("Pib > pib2: %d\n", pib > pib2);
-    printf("Pontos turisticos > pontosturisticos2: %d\n", pontosturisticos > pontosturisticos2);
-    printf("Densidade populacional > densidade populacional2: %d\n", densidadepopulacional > densidadepopulacional2);
-    printf("Pib per capita > pib per capita2: %d\n", pibpercapta > pibpercapta2);
-    printf("Super poder > super poder2: %d\n", poder1 > poder2);
+   // Comparação
+    if(populacao > populacao2){ 
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if(area > area2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if (pib > pib2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if (pontosturisticos > pontosturisticos2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if(densidadepopulacional < densidadepopulacional2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if(pibpercapta > pibpercapta2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+    if(poder1 > poder2){
+        printf("Carta 1 venceu! \n");
+    }else{
+        printf("Carta 2 venceu! \n");
+    }
+
+    if(poder1 > poder2){
+        printf("Carta 1 venceu a disputa final!\n");
+    }else if(pib > pib2){
+        printf("Carta 2 venceu a disputa final!\n");
+    }else{
+        printf("Houve um empate!\n");
+    }
+
 
     return 0;
 
